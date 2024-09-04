@@ -92,8 +92,18 @@ public class ViewCadastroUsuarios {
         btnCadastrar.setBounds(624, 520, 150, 30);  // define a posição e o tamanho do botão
         btnCadastrar.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                JOptionPane.showMessageDialog(null, "Usuário cadastrado com sucesso!");  // exibe uma mensagem de sucesso
-                // aqui você adicionaria o código para cadastrar o usuário
+            	 // Verifica se todos os campos estão preenchidos
+                if (txtNome.getText().isEmpty() || txtFuncao.getText().isEmpty() || txtId.getText().isEmpty() || txtSenha.getText().isEmpty()) {
+                    JOptionPane.showMessageDialog(null, "Por favor, preencha todos os campos.", "Erro", JOptionPane.WARNING_MESSAGE);
+                } else {
+                    // Aqui você adicionaria o código para cadastrar o usuário
+                    JOptionPane.showMessageDialog(null, "Usuário cadastrado com sucesso!");
+                    // Fechar a janela atual
+                    frame.dispose();
+                    // Opcional: redirecionar para outra tela
+                    // ViewHomeScreen homeScreen = new ViewHomeScreen();
+                    // homeScreen.getFrame().setVisible(true);
+                }
             }
         });
         frame.getContentPane().add(btnCadastrar);  // adiciona o botão à janela
@@ -109,6 +119,17 @@ public class ViewCadastroUsuarios {
         });
         frame.getContentPane().add(btnLogout);  // adiciona o botão à janela
         
+        /*JButton btnVoltar = new JButton("Voltar");  // cria um botão para voltar à tela de registros
+        btnVoltar.setBounds(120, 520, 100, 30);  // define a posição e o tamanho do botão
+        btnVoltar.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+            	frame.dispose();  // fecha a janela atual
+                ViewRegistroPontos registroPontosScreen = new ViewRegistroPontos();  // cria uma nova instância da tela de registro de pontos
+                registroPontosScreen.mostrarTela();  // torna a janela de registros visível
+            }
+        });
+        frame.getContentPane().add(btnVoltar);  // adiciona o botão à janela
+        */
         JLabel lblNovoCadastro = new JLabel("Cadastro de Usuário");
         lblNovoCadastro.setForeground(new Color(64, 128, 128));
         lblNovoCadastro.setFont(new Font("JetBrains Mono", Font.BOLD, 35));
