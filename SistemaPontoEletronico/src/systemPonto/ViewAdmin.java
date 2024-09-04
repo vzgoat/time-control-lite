@@ -10,9 +10,8 @@ import javax.swing.JOptionPane;
 
 public class ViewAdmin {
 
-    private JFrame frame;  // variável para armazenar a janela principal da interface gráfica
-
-    // método pra inicializar a tela do admin
+    private JFrame frame;  
+  
     public static void main(String[] args) {
         EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -26,44 +25,45 @@ public class ViewAdmin {
         });
     }
 
-    // inicializa a interface gráfica
     public ViewAdmin() {
-        initialize();  // chama o método para configurar a interface gráfica
+        initialize();  
     }
 
     private void initialize() {
         frame = new JFrame();
-        frame.setBounds(100, 100, 450, 300);  // define a posição e o tamanho da janela (x, y, largura, altura)
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  // define que a janela será fechada ao clicar no botão de fechar
-        frame.getContentPane().setLayout(null);  // define o layout como nulo, permitindo definir posições e tamanhos manualmente
+        frame.setBounds(100, 100, 450, 300);  
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
+        frame.getContentPane().setLayout(null);  
 
-        JLabel lblAdmin = new JLabel("Área do Administrador");  // cria um rótulo de texto
-        lblAdmin.setBounds(150, 30, 150, 25);  // define a posição e o tamanho do rótulo (x, y, largura, altura)
-        frame.getContentPane().add(lblAdmin);  // adiciona o rótulo à janela
+        JLabel lblAdmin = new JLabel("Área do Administrador");  
+        lblAdmin.setBounds(150, 30, 150, 25);  
+        frame.getContentPane().add(lblAdmin); 
 
-        JButton btnCadastrarUsuarios = new JButton("Cadastrar Usuários");  // cria um botão para cadastrar usuários
-        btnCadastrarUsuarios.setBounds(150, 80, 150, 25);  // define a posição e o tamanho do botão (x, y, largura, altura)
+        JButton btnCadastrarUsuarios = new JButton("Cadastrar Usuários");  
+        btnCadastrarUsuarios.setBounds(150, 80, 150, 25);
         btnCadastrarUsuarios.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                ViewCadastroUsuarios cadastroUsuarios = new ViewCadastroUsuarios();  // cria uma nova tela para cadastro de usuários
-                cadastroUsuarios.mostrarTela();  // chama o método para mostrar a tela de cadastro
+                ViewCadastroUsuarios cadastroUsuarios = new ViewCadastroUsuarios(); 
+                cadastroUsuarios.mostrarTela();  
             }
         });
-        frame.getContentPane().add(btnCadastrarUsuarios);  // adiciona o botão à janela
-
-        JButton btnVisualizarRegistros = new JButton("Visualizar Registros");  // cria um botão para visualizar registros
-        btnVisualizarRegistros.setBounds(150, 120, 150, 25);  // define a posição e o tamanho do botão (x, y, largura, altura)
+        frame.getContentPane().add(btnCadastrarUsuarios); 
+        
+        // TESTE PARA TELA ADMIN
+        
+        JButton btnVisualizarRegistros = new JButton("Visualizar Registros"); 
+        btnVisualizarRegistros.setBounds(150, 120, 150, 25);  
         btnVisualizarRegistros.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
+           
+        	public void actionPerformed(ActionEvent e) {
                 // lógica para visualizar registros (ainda não implementada)
-                JOptionPane.showMessageDialog(null, "test");  // exibe uma caixa de mensagem com o texto "test"
+                JOptionPane.showMessageDialog(null, "test");  
             }
         });
-        frame.getContentPane().add(btnVisualizarRegistros);  // adiciona o botão à janela
+        frame.getContentPane().add(btnVisualizarRegistros);  
     }
 
-    // método para mostrar a tela de admin
     public void mostrarTela() {
-        frame.setVisible(true);  // torna a janela visível
+        frame.setVisible(true); 
     }
 }

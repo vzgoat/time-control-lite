@@ -21,7 +21,6 @@ public class ViewHomeScreen {
     private JPasswordField txtPassword;  
     private boolean isAdmin;   
 
-     
     public static void main(String[] args) {
         EventQueue.invokeLater(new Runnable() {
             public void run() {

@@ -15,13 +15,13 @@ import javax.swing.JPanel;
 
 public class ViewCadastroUsuarios {
 
-    private JFrame frame;  // variável para armazenar a janela principal da interface gráfica
-    private JTextField txtNome;  // campo de texto para o nome
-    private JTextField txtFuncao;  // campo de texto para a função
-    private JTextField txtId;  // campo de texto para o ID
-    private JTextField txtSenha;  // campo de texto para a senha
+    private JFrame frame; 
+    private JTextField txtNome; 
+    private JTextField txtFuncao;  
+    private JTextField txtId;  
+    private JTextField txtSenha;  
 
-    // método pra inicializar a tela de cadastro de usuários
+    
     public static void main(String[] args) {
         EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -35,72 +35,75 @@ public class ViewCadastroUsuarios {
         });
     }
 
-    // inicializa a interface gráfica
     public ViewCadastroUsuarios() {
-        initialize();  // chama o método para configurar a interface gráfica
+        initialize();  
     }
 
     private void initialize() {
-        frame = new JFrame();  // cria a janela principal
-        frame.setBounds(100, 100, 800, 600);  // define a posição e o tamanho da janela (x, y, largura, altura)
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  // define que a janela será fechada ao clicar no botão de fechar
-        frame.getContentPane().setLayout(null);  // define o layout como nulo, permitindo definir posições e tamanhos manualmente
-        frame.setResizable(false);  // impede que a janela seja redimensionada
-        frame.setLocationRelativeTo(null);  // centraliza a janela na tela
+        frame = new JFrame(); 
+        frame.setBounds(100, 100, 800, 600);  
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  
+        frame.getContentPane().setLayout(null);  
+        frame.setResizable(false); 
+        frame.setLocationRelativeTo(null); 
 
-        JLabel lblNome = new JLabel("Nome:");  // cria um rótulo de texto para o nome
+        JLabel lblNome = new JLabel("Nome:");  
         lblNome.setHorizontalAlignment(SwingConstants.CENTER);
-        lblNome.setBounds(218, 180, 100, 30);  // define a posição e o tamanho do rótulo (x, y, largura, altura)
-        frame.getContentPane().add(lblNome);  // adiciona o rótulo à janela
+        lblNome.setBounds(218, 180, 100, 30);  
+        frame.getContentPane().add(lblNome);
 
-        txtNome = new JTextField();  // cria um campo de texto para o nome
+        txtNome = new JTextField();
         txtNome.setHorizontalAlignment(SwingConstants.CENTER);
-        txtNome.setBounds(302, 180, 300, 30);  // define a posição e o tamanho do campo de texto (x, y, largura, altura)
-        frame.getContentPane().add(txtNome);  // adiciona o campo de texto à janela
+        txtNome.setBounds(302, 180, 300, 30); 
+        frame.getContentPane().add(txtNome);  
 
-        JLabel lblFilial = new JLabel("Filial:");  // cria um rótulo de texto para a função
+        JLabel lblFilial = new JLabel("Filial:");  
         lblFilial.setHorizontalAlignment(SwingConstants.CENTER);
-        lblFilial.setBounds(218, 221, 100, 30);  // define a posição e o tamanho do rótulo
-        frame.getContentPane().add(lblFilial);  // adiciona o rótulo à janela
+        lblFilial.setBounds(218, 221, 100, 30); 
+        frame.getContentPane().add(lblFilial);  
 
-        txtFuncao = new JTextField();  // cria um campo de texto para a função
+        txtFuncao = new JTextField();  
         txtFuncao.setHorizontalAlignment(SwingConstants.CENTER);
-        txtFuncao.setBounds(302, 221, 300, 30);  // define a posição e o tamanho do campo de texto
-        frame.getContentPane().add(txtFuncao);  // adiciona o campo de texto à janela
-
-        JLabel lblId = new JLabel("ID:");  // cria um rótulo de texto para o ID
+        txtFuncao.setBounds(302, 221, 300, 30);  
+        frame.getContentPane().add(txtFuncao); 
+        
+        JLabel lblId = new JLabel("ID:"); 
         lblId.setHorizontalAlignment(SwingConstants.CENTER);
-        lblId.setBounds(218, 262, 100, 30);  // define a posição e o tamanho do rótulo
-        frame.getContentPane().add(lblId);  // adiciona o rótulo à janela
+        lblId.setBounds(218, 262, 100, 30);  
+        frame.getContentPane().add(lblId);  
 
-        txtId = new JTextField();  // cria um campo de texto para o ID
+        txtId = new JTextField(); 
         txtId.setHorizontalAlignment(SwingConstants.CENTER);
-        txtId.setBounds(302, 262, 300, 30);  // define a posição e o tamanho do campo de texto
-        frame.getContentPane().add(txtId);  // adiciona o campo de texto à janela
+        txtId.setBounds(302, 262, 300, 30);  
+        frame.getContentPane().add(txtId);  
 
-        JLabel lblSenha = new JLabel("Senha:");  // cria um rótulo de texto para a senha
+        JLabel lblSenha = new JLabel("Senha:");  
         lblSenha.setHorizontalAlignment(SwingConstants.CENTER);
-        lblSenha.setBounds(218, 313, 100, 30);  // define a posição e o tamanho do rótulo
-        frame.getContentPane().add(lblSenha);  // adiciona o rótulo à janela
+        lblSenha.setBounds(218, 313, 100, 30); 
+        frame.getContentPane().add(lblSenha);  
 
-        txtSenha = new JTextField();  // cria um campo de texto para a senha
+        txtSenha = new JTextField();  
         txtSenha.setHorizontalAlignment(SwingConstants.CENTER);
-        txtSenha.setBounds(302, 313, 300, 30);  // define a posição e o tamanho do campo de texto
-        frame.getContentPane().add(txtSenha);  // adiciona o campo de texto à janela
+        txtSenha.setBounds(302, 313, 300, 30); 
+        frame.getContentPane().add(txtSenha);  
 
-        JButton btnCadastrar = new JButton("Cadastrar");  // cria um botão para cadastrar o usuário
-        btnCadastrar.setBounds(624, 520, 150, 30);  // define a posição e o tamanho do botão
+        JButton btnCadastrar = new JButton("Cadastrar"); 
+        btnCadastrar.setBounds(624, 520, 150, 30); 
         btnCadastrar.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-            	 // Verifica se todos os campos estão preenchidos
+          
+        	// verificador de campos preenchidos
+        	public void actionPerformed(ActionEvent e) {
+            	
                 if (txtNome.getText().isEmpty() || txtFuncao.getText().isEmpty() || txtId.getText().isEmpty() || txtSenha.getText().isEmpty()) {
                     JOptionPane.showMessageDialog(null, "Por favor, preencha todos os campos.", "Erro", JOptionPane.WARNING_MESSAGE);
                 } else {
-                    // Aqui você adicionaria o código para cadastrar o usuário
+                    
                     JOptionPane.showMessageDialog(null, "Usuário cadastrado com sucesso!");
-                    // Fechar a janela atual
+                   
                     frame.dispose();
-                    // Opcional: redirecionar para outra tela
+                    // outras opções ->
+                    
+                    // redirecionar para outra tela
                     // ViewHomeScreen homeScreen = new ViewHomeScreen();
                     // homeScreen.getFrame().setVisible(true);
                 }
