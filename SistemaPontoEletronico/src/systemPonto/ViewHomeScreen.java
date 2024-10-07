@@ -40,7 +40,6 @@ public class ViewHomeScreen {
         initialize();   
     }
 
-    // inicializa a interface gráfica
     private void initialize() {
         frame = new JFrame();   
         frame.setBounds(100, 100, 800, 600);   
@@ -48,15 +47,6 @@ public class ViewHomeScreen {
         frame.getContentPane().setLayout(null);   
         frame.setResizable(false);   
         frame.setLocationRelativeTo(null);   
-        
-        // configurando o rótulo da tela
-        JLabel lblLOGIN = new JLabel("LOGIN");
-        lblLOGIN.setForeground(new Color(64, 128, 128));
-        lblLOGIN.setFont(new Font("JetBrains Mono", Font.BOLD, 35));
-        lblLOGIN.setHorizontalAlignment(SwingConstants.CENTER);
-        lblLOGIN.setBackground(new Color(64, 128, 128));
-        lblLOGIN.setBounds(498, 23, 164, 134);
-        frame.getContentPane().add(lblLOGIN);
 
         JLabel lblLogin = new JLabel("Login");   
         lblLogin.setHorizontalAlignment(SwingConstants.CENTER);
@@ -119,29 +109,24 @@ public class ViewHomeScreen {
             }
         });
         
-        frame.getContentPane().add(btnEntrar);  
-        /*-------------------------------------------------------------------------------------------------------*/        
-
-        // Determinando actionListener e actionPerformed
-        JButton btnLogout = new JButton("Logout");   
-        btnLogout.setBounds(10, 510, 100, 40);   
-        btnLogout.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                frame.dispose();   
-                ViewHomeScreen loginScreen = new ViewHomeScreen(isAdmin);   
-                loginScreen.getFrame().setVisible(true);   
-            }
-        });
-        frame.getContentPane().add(btnLogout);   
+        frame.getContentPane().add(btnEntrar);
         
-        JPanel panelBorda = new JPanel();
-        panelBorda.setBackground(new Color(64, 128, 128));
-        panelBorda.setBounds(-2, -4, 396, 560);
-        frame.getContentPane().add(panelBorda);
+        JLabel lblNewLabel = new JLabel("TimeControle LITE");
+        lblNewLabel.setForeground(new Color(255, 255, 255));
+        lblNewLabel.setFont(new Font("JetBrains Mono", Font.BOLD, 25));
+        lblNewLabel.setBounds(50, 101, 255, 47);
+        frame.getContentPane().add(lblNewLabel);
         
-        JPanel panelTelaLogin = new JPanel();
-        panelTelaLogin.setBounds(394, -4, 390, 565);
-        frame.getContentPane().add(panelTelaLogin);
+        JPanel panel = new JPanel();
+        panel.setBackground(new Color(64, 128, 128));
+        panel.setBounds(0, 0, 377, 580);
+        frame.getContentPane().add(panel);
+        
+        JLabel lblNewLabel_1 = new JLabel("LOGIN");
+        lblNewLabel_1.setFont(new Font("JetBrains Mono", Font.BOLD, 25));
+        lblNewLabel_1.setForeground(new Color(64, 128, 128));
+        lblNewLabel_1.setBounds(540, 109, 85, 30);
+        frame.getContentPane().add(lblNewLabel_1);
     }
 
     

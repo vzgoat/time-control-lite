@@ -31,7 +31,6 @@ public class ViewRegistroPontos {
             }
         });
     }
-
     
     public ViewRegistroPontos(boolean isAdmin) {
         this.isAdmin = isAdmin;  
@@ -57,22 +56,22 @@ public class ViewRegistroPontos {
         JLabel lblMensagem = new JLabel("Registre seu ponto");
         lblMensagem.setForeground(new Color(64, 128, 128));
         lblMensagem.setFont(new Font("JetBrains Mono", Font.BOLD, 35));
-        lblMensagem.setBounds(196, 34, 384, 68);  
+        lblMensagem.setBounds(197, 54, 384, 68);  
         frame.getContentPane().add(lblMensagem);  
         
         // cria e configura o botão para registrar chegada
         JButton btnRegistrarChegada = new JButton("Registrar Chegada");
-        btnRegistrarChegada.setBounds(291, 113, 200, 40);  
+        btnRegistrarChegada.setBounds(268, 213, 238, 40);  
         frame.getContentPane().add(btnRegistrarChegada);  
 
         // cria e configura o botão para registrar pausa
         JButton btnRegistrarPausa = new JButton("Registrar Pausa");
-        btnRegistrarPausa.setBounds(291, 173, 200, 40);  
+        btnRegistrarPausa.setBounds(268, 264, 119, 40);  
         frame.getContentPane().add(btnRegistrarPausa); 
 
         // cria e configura o botão para registrar saída
         JButton btnRegistrarSaida = new JButton("Registrar Saída");
-        btnRegistrarSaida.setBounds(291, 233, 200, 40);  
+        btnRegistrarSaida.setBounds(268, 315, 238, 40);  
         frame.getContentPane().add(btnRegistrarSaida);  
         
         // configura o botão para cadastrar usuários
@@ -99,6 +98,14 @@ public class ViewRegistroPontos {
         panelFooter.setForeground(new Color(64, 128, 128));
         panelFooter.setBounds(0, 509, 784, 52);
         frame.getContentPane().add(panelFooter);
+        
+        JButton btnRegistrarPausa_1 = new JButton("Registrar Retorno");
+        btnRegistrarPausa_1.addActionListener(new ActionListener() {
+        	public void actionPerformed(ActionEvent e) {
+        	}
+        });
+        btnRegistrarPausa_1.setBounds(387, 264, 119, 40);
+        frame.getContentPane().add(btnRegistrarPausa_1);
 
         // actionListener botão de registrar chegada
         btnRegistrarChegada.addActionListener(new ActionListener() {

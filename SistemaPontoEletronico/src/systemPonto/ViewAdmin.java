@@ -1,4 +1,4 @@
-package systemPonto;
+/*package systemPonto;
 
 import java.awt.EventQueue;
 import javax.swing.JFrame;
@@ -67,3 +67,4 @@ public class ViewAdmin {
         frame.setVisible(true); 
     }
 }
+*/

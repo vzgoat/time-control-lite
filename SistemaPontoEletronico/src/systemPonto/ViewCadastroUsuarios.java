@@ -101,11 +101,7 @@ public class ViewCadastroUsuarios {
                     JOptionPane.showMessageDialog(null, "Usuário cadastrado com sucesso!");
                    
                     frame.dispose();
-                    // outras opções ->
-                    
-                    // redirecionar para outra tela
-                    // ViewHomeScreen homeScreen = new ViewHomeScreen();
-                    // homeScreen.getFrame().setVisible(true);
+       
                 }
             }
         });
@@ -146,8 +142,7 @@ public class ViewCadastroUsuarios {
         frame.getContentPane().add(panel);
     }
 
-    // método para mostrar a tela de cadastro de usuários
     public void mostrarTela() {
-        frame.setVisible(true);  // torna a janela visível
+        frame.setVisible(true);  
     }
 }
